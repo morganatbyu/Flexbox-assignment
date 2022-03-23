@@ -98,6 +98,7 @@ nav li a {
   font-size: 1.5rem;
   margin: 1rem;
   padding: 1rem 1.8rem;
+  border: 3px solid transparent;
   
   
 }
@@ -232,14 +233,14 @@ a:focus {
 .hero h1 {
   font-family: "Fira Sans", sans-serif;
   margin: 0;
-  font-size: 7rem;
+  font-size: clamp(3rem,2.0327rem + 4.1830vw,7rem);
   text-align: center;
   color: #fff;
 }
 .hero p {
   font-family: "Fira Sans", sans-serif;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: clamp(.75rem,6vw,1.5rem);
   text-align: center;
   padding: 1em;
 }
@@ -248,11 +249,12 @@ a:focus {
 .panel {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 .panel .image-wrapper {
   order: -1;
-  margin-bottom: 2rem;
+
 }
 
 .panel h3 {
@@ -379,8 +381,21 @@ aside p {
   .cards {
     flex-direction: row;
     flex-wrap: wrap;
+  
   }
-
+.panel{
+  flex-direction: row;
+}
+.panel .image-wrapper{
+  flex: 1 1 40%;
+  order: 0;
+}
+.panel .text-wrapper {
+  flex: 1 1 60%;
+}
+.panel .left {
+  order:-1;
+}
   .card {
     flex: 1 1 40%;
   }
